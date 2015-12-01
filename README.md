@@ -85,10 +85,11 @@ Out[6]: Decimal('27.635')
 
 ### Convert frequency to channel
 
-```ToDo```
+ToDo
 
 
 ## Install
+
 ```
 $ git clone https://github.com/scls19fr/pyCitizenBand.git
 ```
