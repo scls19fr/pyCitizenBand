@@ -71,7 +71,6 @@ class CitizenBand(object):
             _frequencies.name = 'frequency'
             _frequencies = pd.DataFrame(_frequencies)
             _frequencies['band'] = band
-            print(_frequencies)
         return _frequencies
 
     @property

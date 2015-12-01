@@ -1,51 +1,43 @@
-language: python
-python:
-  - "2.7"
-  - "3.3"
-  - "3.4"
-  - "3.5"
+sudo: false
 
-before_install:
-  - sudo apt-get update -qq
+language: python
+
+env:
+  - PYTHON=2.7
+  - PYTHON=3.3
+  - PYTHON=3.4
+  - PYTHON=3.5
+
+install:
   # You may want to periodically update this, although the conda update
   # conda line below will keep everything up-to-date.  We do this
   # conditionally because it saves us some downloading if the version is
   # the same.
-  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
+  - if [[ "$PYTHON" == "2.7" ]]; then
       wget http://repo.continuum.io/miniconda/Miniconda-3.4.2-Linux-x86_64.sh -O miniconda.sh;
     else
       wget http://repo.continuum.io/miniconda/Miniconda3-3.4.2-Linux-x86_64.sh -O miniconda.sh;
     fi
-  - chmod +x miniconda.sh
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
   - hash -r
-  - conda config --set always_yes yes --set changeps1 no --set show_channel_urls yes
+  - conda config --set always_yes yes --set changeps1 no
+  - conda config --add channels pandas
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
-
-  # Replace dep1 dep2 ... with your dependencies
-  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION
-
-# command to install dependencies
-install:
+  - conda create -q -n test-environment python=$PYTHON pandas nose coverage setuptools
   - source activate test-environment
-  - conda install pandas --yes
+  - if [[ "$PYTHON" == "2.6" ]]; then  
+      pip install simplejson;
+    fi
+  - pip install coveralls --quiet
+  - conda list
   - python setup.py install
 
-# command to run tests
-script: 
-  - nosetests --with-doctest
-#  - nosetests --with-coverage --cover-package=pandas_confusion --logging-level=INFO
+script:
+    - nosetests -v --with-coverage --cover-package=pyCitizenBand --with-doctest
 
-# Calculate coverage
-#after_success:
-#  - coveralls
-#  - codecov
+after_success:
+  - coveralls
 
-#addons:
-#  apt_packages:
-#    - pandoc
-#    - libblas-dev
-#    - python-dev
