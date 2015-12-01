@@ -27,7 +27,7 @@ setup(
     #version='0.0.2',
     version=__version__,
 
-    description='A Python package with some useful function for Citizen Band users, DXers, ...',
+    description='A Python package with some useful functions for Citizen Band users, DXers, ...',
     long_description=readme(),
 
     # The project's main homepage.
