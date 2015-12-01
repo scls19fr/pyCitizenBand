@@ -31,7 +31,7 @@ before_install:
 # command to install dependencies
 install:
   - source activate test-environment
-  - conda install numpy pandas scipy scikit-learn click --yes
+  - conda install pandas --yes
   - python setup.py install
 
 # command to run tests
