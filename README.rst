@@ -1,23 +1,23 @@
 .. image:: https://img.shields.io/pypi/v/pyCitizenBand.svg
-   :target: https://pypi.python.org/pypi/pyCitizenBand/
+    :target: https://pypi.python.org/pypi/pyCitizenBand/
 .. image:: https://img.shields.io/pypi/pyversions/pyCitizenBand.svg
-   :target: https://pypi.python.org/pypi/pyCitizenBand/
+    :target: https://pypi.python.org/pypi/pyCitizenBand/
 .. image:: https://img.shields.io/pypi/wheel/pyCitizenBand.svg
-   :target: https://pypi.python.org/pypi/pyCitizenBand/
+    :target: https://pypi.python.org/pypi/pyCitizenBand/
 .. image:: https://img.shields.io/pypi/l/pyCitizenBand.svg
-   :target: https://pypi.python.org/pypi/pyCitizenBand/
+    :target: https://pypi.python.org/pypi/pyCitizenBand/
 .. image:: https://img.shields.io/pypi/status/pyCitizenBand.svg
-   :target: https://pypi.python.org/pypi/pyCitizenBand/
+    :target: https://pypi.python.org/pypi/pyCitizenBand/
 .. image:: https://img.shields.io/pypi/dm/pyCitizenBand.svg
-   :target: https://pypi.python.org/pypi/pyCitizenBand/
+    :target: https://pypi.python.org/pypi/pyCitizenBand/
 .. image:: https://requires.io/github/scls19fr/pyCitizenBand/requirements.svg?branch=master
-   :target: https://requires.io/github/scls19fr/pyCitizenBand/requirements/?branch=master
+    :target: https://requires.io/github/scls19fr/pyCitizenBand/requirements/?branch=master
 .. image:: https://landscape.io/github/scls19fr/pyCitizenBand/master/landscape.svg?style=flat
-   :target: https://landscape.io/github/scls19fr/pyCitizenBand/master
-.. image:: https://www.codacy.com/project/badge/??
-   :target: https://www.codacy.com/app/s-celles/pyCitizenBand
+    :target: https://landscape.io/github/scls19fr/pyCitizenBand/master
+.. image:: https://api.codacy.com/project/badge/grade/ff80cb234a9845d8934119323e1e66c4
+    :target: https://www.codacy.com/app/s-celles/pyCitizenBand
 .. image:: https://travis-ci.org/scls19fr/pyCitizenBand.svg
-   :target: https://travis-ci.org/scls19fr/pyCitizenBand
+    :target: https://travis-ci.org/scls19fr/pyCitizenBand
 
 
 pyCitizenBand
