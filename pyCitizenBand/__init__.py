@@ -89,8 +89,9 @@ class CitizenBand(object):
             raise NotImplementedError(
                 "Out of bands %s - frequency should be between [%s, %s]" 
                 % (self.bands, self._fmin, self._fmax))
-        self._df_freq_1d['delta_f'] = abs(self._df_freq_1d['frequency'] - frequency)
-        self._df_freq_1d = self._df_freq_1d.sort_values(by='delta_f')
+        self._df_freq_1d['delta_f'] = self._df_freq_1d['frequency'] - frequency
+        self._df_freq_1d['abs_delta_f'] = abs(self._df_freq_1d['delta_f'])
+        self._df_freq_1d = self._df_freq_1d.sort_values(by='abs_delta_f')
         res = self._df_freq_1d.iloc[0]
         return res.channel, res.band, res.delta_f
 
