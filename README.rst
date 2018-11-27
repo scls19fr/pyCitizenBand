@@ -16,8 +16,8 @@
     :target: https://landscape.io/github/scls19fr/pyCitizenBand/master
 .. image:: https://api.codacy.com/project/badge/grade/ff80cb234a9845d8934119323e1e66c4
     :target: https://www.codacy.com/app/s-celles/pyCitizenBand
-.. image:: https://travis-ci.org/scls19fr/pyCitizenBand.svg
-    :target: https://travis-ci.org/scls19fr/pyCitizenBand
+.. image:: https://travis-ci.com/scls19fr/pyCitizenBand.svg
+    :target: https://travis-ci.com/scls19fr/pyCitizenBand
 
 
 pyCitizenBand
